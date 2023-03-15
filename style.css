@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Kite+One&display=swap');
+
+
+/* font-family: 'Henny Penny', cursive;
+font-family: 'Kite One', sans-serif; */
+
 *{
     box-sizing: border-box;
 }
@@ -5,18 +11,19 @@
 html, body{
     margin: 0px;
     padding: 0px;
+    background: #FF0000;
+    background: radial-gradient(circle, #FF0000 0%, #F1D302 100%);
 }
 
 
 .grid-container{
-    border: 1px solid green;
     width: 100vw;
-    height: 100vw;
+    height: auto;
     display: grid;
     grid-template-columns: repeat(6, 1fr) ;
     grid-template-rows: repeat(6, 1fr) ;
     grid-template-areas:
-    ". . . . . ."
+    ". . title title . ."
     ". . . a1 . ." 
     ". a4 a4 a1. ." 
     ". . a3 a2 a2." 
@@ -25,8 +32,16 @@ html, body{
 }
 
 .arm{
-    border: 1px solid red;
     justify-items: stretch;
+}
+
+.title{
+    grid-area: title;
+    font-family: 'Henny Penny', cursive;
+    font-size:60px;
+    justify-content: center;
+    display: flex;
+    color: #383737;
 }
 
 .a1{
@@ -55,26 +70,47 @@ html, body{
 .arm-img{
     width: 16.66vw;
     height: 16.66vw;
-    border: 1px solid green;
 }
 
 .arm-text{
+    background-color: #70a002;
     width: 16.66vw;
     height: 16.66vw;
-    border: 1px solid yellow;
+    border: 1px solid rgb(114, 114, 114);
     display: flex;
-    align-items: center;
-    text-align: center;
+    align-items: baseline;
+    text-align: justify;
     padding: 8px;
+    overflow: hidden;
 }
+
+a{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: baseline;
+}
+span{
+    font-size: 0.9em;
+}
+
+p, span{
+    font-family: 'Kite One', sans-serif; 
+}
+
+h2{
+    font-family: 'Henny Penny', cursive;
+}
+
 
 @media only screen and (max-width: 1000px) {
     .grid-container{
         width: 100vw;
-        height: 200vw;
+        height: auto;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
         grid-template-areas: 
+        "title title"
             "a4 a4"
             "a3 a1"
             "a3 a1"
@@ -89,13 +125,17 @@ html, body{
     .arm-text{
         width: 50vw;
         height: 50vw;
+        background-color: #F1D302;
     }
 }
+
+
+
 
 @media only screen and (max-width: 600px) {
     .grid-container{
         width: 100vw;
-        height: 800vw;
+        height: auto;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(8, 1fr);
         grid-template-areas: 
@@ -117,6 +157,7 @@ html, body{
     .arm-text{
         width: 100vw;
         height: 100vw;
+        background-color: #F1D302;
     }
     
     .arm{
