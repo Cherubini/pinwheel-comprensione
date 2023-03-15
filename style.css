@@ -29,10 +29,13 @@ html, body{
     ". . a3 a2 a2." 
     ". . a3 . . ." 
     ". . . . . .";
+    
 }
 
 .arm{
-    justify-items: stretch;
+    justify-items: stretch; 
+    -webkit-box-shadow: 5px 5px 15px -1px #000000; 
+    box-shadow: 5px 5px 15px -1px #000000;
 }
 
 .title{
@@ -80,8 +83,9 @@ html, body{
     display: flex;
     align-items: baseline;
     text-align: justify;
-    padding: 8px;
+    padding: 18px;
     overflow: hidden;
+    font-family: 'Kite One', sans-serif; 
 }
 
 a{
@@ -90,12 +94,10 @@ a{
     display: flex;
     align-items: baseline;
 }
-span{
-    font-size: 0.9em;
-}
 
-p, span{
+p{
     font-family: 'Kite One', sans-serif; 
+    font-size: 1.1em;
 }
 
 h2{
